@@ -17,6 +17,7 @@ function App() {
     setTodos(newTodos);
   };
 
+  // Set todo to complete
   const completeTodo = (id) => {
     let updatedTodos = todos.map((todo) => {
       if (todos.id === id) {
@@ -27,12 +28,14 @@ function App() {
     setTodos(updatedTodos);
   };
 
+  // Remove a todo
   const removeTodo = (id) => {
     const remove = [...todos].filter((todo) => todo.id !== id);
 
     setTodos(remove);
   };
 
+  // Edit a todo
   const editTodo = (id, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;

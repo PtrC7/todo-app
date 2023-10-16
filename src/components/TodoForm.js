@@ -51,7 +51,7 @@ function TodoForm(props) {
             ref={inputRef}
           />
           <button onClick={handleSubmit} className="todo-button">
-            Submit
+            Add
           </button>
         </>
       )}
